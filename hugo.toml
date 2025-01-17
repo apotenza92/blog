@@ -1,4 +1,16 @@
 baseURL = 'https://apotenza92.github.io/blog/'
 languageCode = 'en-us'
 title = "Alex's Blog"
-theme = "ananke"
+theme = "PaperMod"
+paginate = 5
+
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+
+[params]
+defaultTheme = "auto"
+ShowReadingTime = true
+ShowBreadCrumbs = true
+ShowPostNavLinks = true
+ShowCodeCopyButtons = true

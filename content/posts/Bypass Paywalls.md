@@ -20,21 +20,21 @@ Sometimes these extensions break or get removed, so here are the full links to w
 
 1. Download zip file [here](https://gitflic.ru/project/magnolia1234/bpc_uploads/blob/raw?file=bypass-paywalls-chrome-clean-master.zip)
 2. Unzip so you have folder: 'bypass-paywalls-chrome-clean-master'
-3. Go to Manage Extensions (may look different depending on browser) ![Image Description](/blog/images/Pasted%20image%2020241009115121.png)
-4. Turn on Developer mode ![Image Description](/images/Pasted%20image%2020241009115232.png)
-5. Click Load unpacked ![Image Description](/images/Pasted%20image%2020241009115507.png)
-6. Find the unzipped folder and select that to load ![Image Description](/images/Pasted%20image%2020241009115547.png)
-7. Once loaded it will automatically open the plugin's setting page. I recommend turning on "Check for update rules at startup". Then just hit save. ![Image Description](/images/Pasted%20image%2020241009115756.png)
-8. You're done! If you go to a website like afr you'll see it's working because the extension will have a small red 'On' icon next to it. ![Image Description](/images/Pasted%20image%2020241009115858.png)
+3. Go to Manage Extensions (may look different depending on browser) ![](/blog/images/Pasted%20image%2020241009115121.png)
+4. Turn on Developer mode ![](/blog/images/Pasted%20image%2020241009115232.png)
+5. Click Load unpacked ![](/blog/images/Pasted%20image%2020241009115507.png)
+6. Find the unzipped folder and select that to load ![](/blog/images/Pasted%20image%2020241009115547.png)
+7. Once loaded it will automatically open the plugin's setting page. I recommend turning on "Check for update rules at startup". Then just hit save. ![](/blog/images/Pasted%20image%2020241009115756.png)
+8. You're done! If you go to a website like afr you'll see it's working because the extension will have a small red 'On' icon next to it. ![](/blog/images/Pasted%20image%2020241009115858.png)
 
 ## Firefox Instructions
 
 1. Download file [here](https://gitflic.ru/project/magnolia1234/bpc_uploads/blob/raw?file=bypass_paywalls_clean-latest.xpi)
-2. Go to about:addons in the URL bar. Go to Extensions, click the gear icon, and then "Install Add-on From File…" ![Image Description](/images/Pasted%20image%2020241009121012.png)
-3. Select the xpi file we downloaded earlier. ![Image Description](/images/Pasted%20image%2020241009121105.png)
+2. Go to about:addons in the URL bar. Go to Extensions, click the gear icon, and then "Install Add-on From File…" ![](/blog/images/Pasted%20image%2020241009121012.png)
+3. Select the xpi file we downloaded earlier. ![](/blog/images/Pasted%20image%2020241009121105.png)
 4. Firefox will ask if you want the extension to have permission, click 'Add'.
-5. Once loaded it will automatically open the plugin's setting page. I recommend turning on "Check for update rules at startup". Then just hit save. ![Image Description](/images/Pasted%20image%2020241009121304.png)
-6. You're done! If you go to a website like afr you'll see it's working because the extension will have a small red 'On' icon next to it. ![Image Description](/images/Pasted%20image%2020241009121350.png)
+5. Once loaded it will automatically open the plugin's setting page. I recommend turning on "Check for update rules at startup". Then just hit save. ![](/blog/images/Pasted%20image%2020241009121304.png)
+6. You're done! If you go to a website like afr you'll see it's working because the extension will have a small red 'On' icon next to it. ![](/blog/images/Pasted%20image%2020241009121350.png)
 
 ## iPhone Safari Instructions (Also Works on iPad and Mac)
 
@@ -56,11 +56,11 @@ This requires the premium version of AdGuard which has various paid plans availa
 13. I recommend going to iCloud Drive and creating a folder called Userscripts (you can make a new folder by clicking the 3 dots in the top right corner). Open the Userscripts folder you just made and click Open. What we just did was tell the Userscripts app to look inside our iCloud / Userscripts folder for any scripts we want to run on websites. This will make more sense soon.
 14. Open Safari on your phone and go to:
 1. [magnolia1234/bypass-paywalls-clean-filters](https://gitflic.ru/project/magnolia1234/bypass-paywalls-clean-filters/blob?file=userscript%2Fbpc.en.user.js&branch=main)
-2. Click the small download icon ![Image Description](/images/IMG_1CBFF10679D5-1.jpeg)
+2. Click the small download icon ![](/blog/images/IMG_1CBFF10679D5-1.jpeg)
 3. Your phone will download the file to your phone. No we need to put this file into the Userscripts folder we created earlier.
 15. Get out of Safari and go to the 'Files' app on your phone.
 16. Go to the 'Browse' tab. Depending on how your phone is set up you will either find your downloads in 'On My iPhone / Downloads' or in 'iCloud Drive / Downloads'. Have a look in both these locations until you find the 'bpc.en.user.js' file we downloaded. Once you find it hold down your finger on it and select 'Move'. Now navigate to the Userscripts folder we created earlier at 'iCloud Drive / Userscripts' and then select Move.
 17. Go back to Safari and let's test it out to make sure it's on. Go to afr.com.
-18. Press this puzzle piece icon and select Userscripts. If you can't see Userscripts select Manage Extensions and turn it on. ![Image Description](/images/IMG_8077E9B345F4-1.jpeg)
-19. A little Userscripts window opens and you should see something like Bypass Paywalls Clean - en with a small JS logo next to it. Make sure this JS logo is lit up, meaning this script is turned on ![Image Description](/images/IMG_C0326EBB3939-1.jpeg)
+18. Press this puzzle piece icon and select Userscripts. If you can't see Userscripts select Manage Extensions and turn it on. ![](/blog/images/IMG_8077E9B345F4-1.jpeg)
+19. A little Userscripts window opens and you should see something like Bypass Paywalls Clean - en with a small JS logo next to it. Make sure this JS logo is lit up, meaning this script is turned on ![](/blog/images/IMG_C0326EBB3939-1.jpeg)
 20. Phew! We're done now. Test it all out by trying to open an afr article!

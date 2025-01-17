@@ -35,7 +35,7 @@ for filename in os.listdir(posts_dir):
         image_filename = os.path.basename(rel_path)
 
         # Convert wikilink to markdown
-        new_link = f"![Image Description](/images/{image_filename.replace(' ', '%20')})"
+        new_link = f"![](/blog/images/{image_filename.replace(' ', '%20')})"
         content = content.replace(f"![[{rel_path}]]", new_link)
 
         # Copy image if it exists
