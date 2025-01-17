@@ -192,8 +192,9 @@ def create_new_post(title, paths):
 
 
 def sync_posts(paths):
-    """Sync posts from Obsidian to Hugo"""
+    """Sync posts from Obsidian to Hugo and merge frontmatter"""
     try:
+        # First sync the files
         subprocess.run(
             [
                 "rsync",
@@ -204,6 +205,71 @@ def sync_posts(paths):
             ],
             check=True,
         )
+
+        required_fields = {
+            "showToc": True,
+            "TocOpen": False,
+            "draft": False,
+            "hidemeta": False,
+            "comments": False,
+            "disableHLJS": False,
+            "disableShare": False,
+            "hideSummary": False,
+            "searchHidden": True,
+            "ShowReadingTime": True,
+            "ShowBreadCrumbs": True,
+            "ShowPostNavLinks": True,
+            "ShowWordCount": True,
+            "ShowRssButtonInSectionTermList": True,
+            "UseHugoToc": True,
+        }
+
+        # Then process each markdown file
+        for filename in os.listdir(paths["hugo"]["posts"]):
+            if not filename.endswith(".md"):
+                continue
+
+            filepath = os.path.join(paths["hugo"]["posts"], filename)
+            with open(filepath, "r") as file:
+                content = file.read()
+
+            # Split content into frontmatter and body
+            parts = content.split("---", 2)
+
+            if len(parts) >= 3:  # Has frontmatter
+                frontmatter = parts[1]
+                body = parts[2]
+
+                # Parse existing frontmatter
+                existing_fields = {}
+                for line in frontmatter.strip().split("\n"):
+                    if ":" in line:
+                        key, value = line.split(":", 1)
+                        existing_fields[key.strip()] = value.strip()
+
+                # Merge with required fields
+                merged_fields = {**required_fields, **existing_fields}
+
+                # Create new frontmatter
+                new_frontmatter = "---\n"
+                new_frontmatter += "\n".join(
+                    f"{k}: {v}" for k, v in merged_fields.items()
+                )
+                new_frontmatter += "\n---"
+
+                content = f"{new_frontmatter}{body}"
+            else:  # No frontmatter
+                new_frontmatter = "---\n"
+                new_frontmatter += "\n".join(
+                    f"{k}: {v}" for k, v in required_fields.items()
+                )
+                new_frontmatter += "\n---\n\n"
+                content = new_frontmatter + content
+
+            # Write the modified content back
+            with open(filepath, "w") as file:
+                file.write(content)
+
     except subprocess.CalledProcessError as e:
         print(f"Error during rsync: {e}")
         if not os.path.exists(paths["obsidian"]["posts"]):

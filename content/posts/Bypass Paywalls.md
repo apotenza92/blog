@@ -1,4 +1,19 @@
 ---
+showToc: True
+TocOpen: False
+draft: False
+hidemeta: False
+comments: False
+disableHLJS: False
+disableShare: False
+hideSummary: False
+searchHidden: True
+ShowReadingTime: True
+ShowBreadCrumbs: True
+ShowPostNavLinks: True
+ShowWordCount: True
+ShowRssButtonInSectionTermList: True
+UseHugoToc: True
 title: Bypass Paywalls
 date created: October 9th 2024, 11:47 am
 date modified: January 17th 2025, 2:13 pm
