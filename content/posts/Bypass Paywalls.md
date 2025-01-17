@@ -20,7 +20,7 @@ Sometimes these extensions break or get removed, so here are the full links to w
 
 1. Download zip file [here](https://gitflic.ru/project/magnolia1234/bpc_uploads/blob/raw?file=bypass-paywalls-chrome-clean-master.zip)
 2. Unzip so you have folder: 'bypass-paywalls-chrome-clean-master'
-3. Go to Manage Extensions (may look different depending on browser) ![Image Description](/images/Pasted%20image%2020241009115121.png)
+3. Go to Manage Extensions (may look different depending on browser) ![Image Description](blog/images/Pasted%20image%2020241009115121.png)
 4. Turn on Developer mode ![Image Description](/images/Pasted%20image%2020241009115232.png)
 5. Click Load unpacked ![Image Description](/images/Pasted%20image%2020241009115507.png)
 6. Find the unzipped folder and select that to load ![Image Description](/images/Pasted%20image%2020241009115547.png)
@@ -47,7 +47,7 @@ This requires the premium version of AdGuard which has various paid plans availa
 5. Open Safari protection and click Filters.
 6. Enable Custom filters and open it. This is why we needed to purchase AdGuard premium, we would not have access to Custom filters without it.
 7. Select Add a filter and a text box will appear. Enter the following URL:  
-	<https://gitflic.ru/project/magnolia1234/bypass-paywalls-clean-filters/blob/raw?file=bpc-paywall-filter.txt>
+ <https://gitflic.ru/project/magnolia1234/bypass-paywalls-clean-filters/blob/raw?file=bpc-paywall-filter.txt>
 8. Click Add.
 9. Exit AdGuard
 10. Download [Userscripts on the App Store](https://apps.apple.com/au/app/userscripts/id1463298887) and open it.
@@ -55,9 +55,9 @@ This requires the premium version of AdGuard which has various paid plans availa
 12. Go back to Userscripts and click Change Userscripts Directory.
 13. I recommend going to iCloud Drive and creating a folder called Userscripts (you can make a new folder by clicking the 3 dots in the top right corner). Open the Userscripts folder you just made and click Open. What we just did was tell the Userscripts app to look inside our iCloud / Userscripts folder for any scripts we want to run on websites. This will make more sense soon.
 14. Open Safari on your phone and go to:
-	1. [magnolia1234/bypass-paywalls-clean-filters](https://gitflic.ru/project/magnolia1234/bypass-paywalls-clean-filters/blob?file=userscript%2Fbpc.en.user.js&branch=main)
-	2. Click the small download icon ![Image Description](/images/IMG_1CBFF10679D5-1.jpeg)
-	3. Your phone will download the file to your phone. No we need to put this file into the Userscripts folder we created earlier.
+1. [magnolia1234/bypass-paywalls-clean-filters](https://gitflic.ru/project/magnolia1234/bypass-paywalls-clean-filters/blob?file=userscript%2Fbpc.en.user.js&branch=main)
+2. Click the small download icon ![Image Description](/images/IMG_1CBFF10679D5-1.jpeg)
+3. Your phone will download the file to your phone. No we need to put this file into the Userscripts folder we created earlier.
 15. Get out of Safari and go to the 'Files' app on your phone.
 16. Go to the 'Browse' tab. Depending on how your phone is set up you will either find your downloads in 'On My iPhone / Downloads' or in 'iCloud Drive / Downloads'. Have a look in both these locations until you find the 'bpc.en.user.js' file we downloaded. Once you find it hold down your finger on it and select 'Move'. Now navigate to the Userscripts folder we created earlier at 'iCloud Drive / Userscripts' and then select Move.
 17. Go back to Safari and let's test it out to make sure it's on. Go to afr.com.

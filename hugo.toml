@@ -2,4 +2,6 @@ baseURL = 'https://apotenza92.github.io/blog/'
 languageCode = 'en-us'
 title = "Alex's Blog"
 theme = "ananke"
+
+
 # canonifyURLs = true
