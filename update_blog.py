@@ -191,6 +191,43 @@ def create_new_post(title, paths):
         return False
 
 
+def get_local_timezone():
+    """Get the local timezone name"""
+    return datetime.now().astimezone().tzinfo
+
+
+def format_date(date_str):
+    """Format date string to Hugo compatible format with local timezone"""
+    try:
+        # Remove ordinal indicators from the date string
+        date_str = date_str.strip('"')
+        date_str = re.sub(r"(\d)(st|nd|rd|th)", r"\1", date_str)
+
+        try:
+            # Parse Obsidian's specific format
+            date_obj = datetime.strptime(date_str, "%B %d %Y, %I:%M %p")
+            local_tz = get_local_timezone()
+            date_obj = date_obj.replace(tzinfo=local_tz)
+            return date_obj.isoformat()
+        except ValueError:
+            # Fallback formats if needed
+            for fmt in [
+                "%Y-%m-%d %H:%M",
+                "%Y-%m-%d",
+            ]:
+                try:
+                    date_obj = datetime.strptime(date_str, fmt)
+                    local_tz = get_local_timezone()
+                    date_obj = date_obj.replace(tzinfo=local_tz)
+                    return date_obj.isoformat()
+                except ValueError:
+                    continue
+        raise ValueError(f"Could not parse date: {date_str}")
+    except Exception as e:
+        print(f"Warning: Date parsing error - {e}")
+        return date_str
+
+
 def sync_posts(paths):
     """Sync posts from Obsidian to Hugo and merge frontmatter"""
     try:
@@ -256,44 +293,31 @@ def sync_posts(paths):
                             continue
 
                         # Convert date modified to date with proper format
-                        if key == "date modified":
+                        if key == "date modified" or key == "date":
                             key = "date"
-                            try:
-                                # First try parsing with time
-                                try:
-                                    date_obj = datetime.strptime(
-                                        value, "%Y-%m-%d %H:%M"
-                                    )
-                                except ValueError:
-                                    # If that fails, try just the date
-                                    date_obj = datetime.strptime(value, "%Y-%m-%d")
-                                # Format in RFC3339 format that Hugo expects
-                                value = f'"{date_obj.strftime("%Y-%m-%dT%H:%M:%S%z")}"'
-                            except ValueError:
-                                print(
-                                    f"Warning: Could not parse date in {filename}: {value}"
-                                )
-                                continue
+                            value = format_date(value)
 
                         existing_fields[key] = value
 
-                # Merge fields
+                # First create merged fields
                 merged_fields = {**required_fields, **existing_fields}
 
                 # Create ordered fields dictionary
                 ordered_fields = {}
 
-                # First add title if it exists
-                if "title" in merged_fields:
-                    ordered_fields["title"] = merged_fields["title"]
-
-                # Then add date if it exists
-                if "date" in merged_fields:
-                    ordered_fields["date"] = merged_fields["date"]
+                # First add title and date if they exist
+                for field in field_order:
+                    if field in merged_fields:
+                        ordered_fields[field] = merged_fields[field]
+                        if field == "date":  # Ensure date is properly quoted
+                            if not ordered_fields[field].startswith('"'):
+                                ordered_fields[field] = f'"{ordered_fields[field]}"'
 
                 # Add remaining fields alphabetically
                 for key in sorted(merged_fields.keys()):
-                    if key not in field_order:
+                    if (
+                        key not in ordered_fields
+                    ):  # Use ordered_fields instead of field_order
                         ordered_fields[key] = merged_fields[key]
 
                 # Create new frontmatter
