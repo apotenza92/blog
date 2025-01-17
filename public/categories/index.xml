@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Alex&#39;s Blog</title>
-    <link>https://github.com/apotenza92/blog/categories/</link>
+    <link>https://apotenza92.github.io/blog/categories/</link>
     <description>Recent content in Categories on Alex&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="https://github.com/apotenza92/blog/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://apotenza92.github.io/blog/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
