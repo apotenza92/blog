@@ -100,38 +100,60 @@ REPO_NAME = "blog"
 
 def get_latest_workflow_run():
     try:
+        # Get workflows started in the last 5 minutes
+        current_time = datetime.now(timezone.utc).isoformat()
         result = subprocess.run(
-            ["gh", "api", f"/repos/{REPO_OWNER}/{REPO_NAME}/actions/runs"],
+            [
+                "gh",
+                "api",
+                f"/repos/{REPO_OWNER}/{REPO_NAME}/actions/runs?created=>2023-01-01&per_page=5",
+            ],
             capture_output=True,
             text=True,
             check=True,
         )
         runs = json.loads(result.stdout).get("workflow_runs", [])
+
+        # Find the most recent "in_progress" or "queued" run
+        for run in runs:
+            if run["status"] in ["in_progress", "queued"]:
+                return run
         return runs[0] if runs else None
-    except subprocess.CalledProcessError:
-        print("Error: Make sure GitHub CLI (gh) is installed and you're logged in")
-        print("Run 'gh auth login' to authenticate")
+    except subprocess.CalledProcessError as e:
+        print(f"Error getting workflow runs: {e}")
         return None
 
 
 def wait_for_workflow():
-    print("\nWaiting for GitHub Actions workflow to complete...")
+    print("\nWaiting 10 seconds for workflow to start...")
+    time.sleep(10)  # Initial delay to let workflow start
+
+    print("Checking workflow status...")
     attempts = 0
     max_attempts = 30  # 5 minutes maximum wait time
 
     while attempts < max_attempts:
         run = get_latest_workflow_run()
         if not run:
+            print("No workflow run found")
             break
 
         status = run["status"]
         conclusion = run["conclusion"]
+        run_id = run["id"]
+
+        print(f"Run ID: {run_id}")
+        print(f"Current status: {status}")
+        print(f"Conclusion: {conclusion}")
 
         if status == "completed":
             if conclusion == "success":
                 print("\n✅ Workflow completed successfully!")
             else:
                 print(f"\n❌ Workflow failed with conclusion: {conclusion}")
+                print(
+                    f"Check: https://github.com/{REPO_OWNER}/{REPO_NAME}/actions/runs/{run_id}"
+                )
             break
 
         print(f"Status: {status}... (checking again in 10 seconds)")
