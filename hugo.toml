@@ -2,3 +2,4 @@ baseURL = 'https://github.com/apotenza92/blog'
 languageCode = 'en-us'
 title = "Alex's Blog"
 theme = "PaperMod"
+canonifyURLs = true
