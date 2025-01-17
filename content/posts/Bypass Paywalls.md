@@ -1,22 +1,20 @@
 ---
-showToc: True
+title: Bypass Paywalls
+ShowBreadCrumbs: True
+ShowPostNavLinks: True
+ShowReadingTime: True
+ShowRssButtonInSectionTermList: True
+ShowWordCount: True
 TocOpen: False
-draft: False
-hidemeta: False
+UseHugoToc: True
 comments: False
 disableHLJS: False
 disableShare: False
+draft: False
 hideSummary: False
+hidemeta: False
 searchHidden: True
-ShowReadingTime: True
-ShowBreadCrumbs: True
-ShowPostNavLinks: True
-ShowWordCount: True
-ShowRssButtonInSectionTermList: True
-UseHugoToc: True
-title: Bypass Paywalls
-date created: October 9th 2024, 11:47 am
-date modified: January 17th 2025, 2:13 pm
+showToc: True
 ---
 
 ## Introduction

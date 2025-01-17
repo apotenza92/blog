@@ -194,7 +194,7 @@ def create_new_post(title, paths):
 def sync_posts(paths):
     """Sync posts from Obsidian to Hugo and merge frontmatter"""
     try:
-        # First sync the files
+        # First sync the files - same as before
         subprocess.run(
             [
                 "rsync",
@@ -205,6 +205,9 @@ def sync_posts(paths):
             ],
             check=True,
         )
+
+        # Define field order (title and date first, then alphabetical)
+        field_order = ["title", "date"]
 
         required_fields = {
             "showToc": True,
@@ -245,15 +248,58 @@ def sync_posts(paths):
                 for line in frontmatter.strip().split("\n"):
                     if ":" in line:
                         key, value = line.split(":", 1)
-                        existing_fields[key.strip()] = value.strip()
+                        key = key.strip()
+                        value = value.strip()
 
-                # Merge with required fields
+                        # Skip date created
+                        if key == "date created":
+                            continue
+
+                        # Convert date modified to date with proper format
+                        if key == "date modified":
+                            key = "date"
+                            try:
+                                # First try parsing with time
+                                try:
+                                    date_obj = datetime.strptime(
+                                        value, "%Y-%m-%d %H:%M"
+                                    )
+                                except ValueError:
+                                    # If that fails, try just the date
+                                    date_obj = datetime.strptime(value, "%Y-%m-%d")
+                                # Format in RFC3339 format that Hugo expects
+                                value = f'"{date_obj.strftime("%Y-%m-%dT%H:%M:%S%z")}"'
+                            except ValueError:
+                                print(
+                                    f"Warning: Could not parse date in {filename}: {value}"
+                                )
+                                continue
+
+                        existing_fields[key] = value
+
+                # Merge fields
                 merged_fields = {**required_fields, **existing_fields}
+
+                # Create ordered fields dictionary
+                ordered_fields = {}
+
+                # First add title if it exists
+                if "title" in merged_fields:
+                    ordered_fields["title"] = merged_fields["title"]
+
+                # Then add date if it exists
+                if "date" in merged_fields:
+                    ordered_fields["date"] = merged_fields["date"]
+
+                # Add remaining fields alphabetically
+                for key in sorted(merged_fields.keys()):
+                    if key not in field_order:
+                        ordered_fields[key] = merged_fields[key]
 
                 # Create new frontmatter
                 new_frontmatter = "---\n"
                 new_frontmatter += "\n".join(
-                    f"{k}: {v}" for k, v in merged_fields.items()
+                    f"{k}: {v}" for k, v in ordered_fields.items()
                 )
                 new_frontmatter += "\n---"
 
