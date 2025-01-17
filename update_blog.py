@@ -174,7 +174,7 @@ def create_new_post(title, paths):
     print(f"Creating new post: {filename}")
     try:
         subprocess.run(
-            ["hugo", "new", f"posts/{filename}", "--kind=papermod"],
+            ["hugo", "new", f"posts/{filename}"],
             cwd=paths["hugo"]["root"],
             check=True,
         )
