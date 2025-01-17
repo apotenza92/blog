@@ -20,7 +20,7 @@ Sometimes these extensions break or get removed, so here are the full links to w
 
 1. Download zip file [here](https://gitflic.ru/project/magnolia1234/bpc_uploads/blob/raw?file=bypass-paywalls-chrome-clean-master.zip)
 2. Unzip so you have folder: 'bypass-paywalls-chrome-clean-master'
-3. Go to Manage Extensions (may look different depending on browser) ![Image Description](blog/images/Pasted%20image%2020241009115121.png)
+3. Go to Manage Extensions (may look different depending on browser) ![Image Description](/blog/images/Pasted%20image%2020241009115121.png)
 4. Turn on Developer mode ![Image Description](/images/Pasted%20image%2020241009115232.png)
 5. Click Load unpacked ![Image Description](/images/Pasted%20image%2020241009115507.png)
 6. Find the unzipped folder and select that to load ![Image Description](/images/Pasted%20image%2020241009115547.png)
