@@ -231,7 +231,7 @@ def format_date(date_str):
 def sync_posts(paths):
     """Sync posts from Obsidian to Hugo and merge frontmatter"""
     try:
-        # First sync the files - same as before
+        # Sync the files
         subprocess.run(
             [
                 "rsync",
@@ -243,28 +243,7 @@ def sync_posts(paths):
             check=True,
         )
 
-        # Define field order (title and date first, then alphabetical)
-        field_order = ["title", "date"]
-
-        required_fields = {
-            "showToc": True,
-            "TocOpen": False,
-            "draft": False,
-            "hidemeta": False,
-            "comments": False,
-            "disableHLJS": False,
-            "disableShare": False,
-            "hideSummary": False,
-            "searchHidden": True,
-            "ShowReadingTime": True,
-            "ShowBreadCrumbs": True,
-            "ShowPostNavLinks": True,
-            "ShowWordCount": True,
-            "ShowRssButtonInSectionTermList": True,
-            "UseHugoToc": True,
-        }
-
-        # Then process each markdown file
+        # Process each markdown file
         for filename in os.listdir(paths["hugo"]["posts"]):
             if not filename.endswith(".md"):
                 continue
@@ -281,7 +260,7 @@ def sync_posts(paths):
                 body = parts[2]
 
                 # Parse existing frontmatter
-                existing_fields = {}
+                fields = {}
                 for line in frontmatter.strip().split("\n"):
                     if ":" in line:
                         key, value = line.split(":", 1)
@@ -297,44 +276,20 @@ def sync_posts(paths):
                             key = "date"
                             value = format_date(value)
 
-                        existing_fields[key] = value
+                        fields[key] = value
 
-                # First create merged fields
-                merged_fields = {**required_fields, **existing_fields}
-
-                # Create ordered fields dictionary
-                ordered_fields = {}
-
-                # First add title and date if they exist
-                for field in field_order:
-                    if field in merged_fields:
-                        ordered_fields[field] = merged_fields[field]
-                        if field == "date":  # Ensure date is properly quoted
-                            if not ordered_fields[field].startswith('"'):
-                                ordered_fields[field] = f'"{ordered_fields[field]}"'
-
-                # Add remaining fields alphabetically
-                for key in sorted(merged_fields.keys()):
-                    if (
-                        key not in ordered_fields
-                    ):  # Use ordered_fields instead of field_order
-                        ordered_fields[key] = merged_fields[key]
-
-                # Create new frontmatter
+                # Create new frontmatter with just title and date
                 new_frontmatter = "---\n"
-                new_frontmatter += "\n".join(
-                    f"{k}: {v}" for k, v in ordered_fields.items()
-                )
-                new_frontmatter += "\n---"
+                if "title" in fields:
+                    new_frontmatter += f"title: {fields['title']}\n"
+                if "date" in fields:
+                    new_frontmatter += f"date: {fields['date']}\n"
+                new_frontmatter += "---"
 
                 content = f"{new_frontmatter}{body}"
+
             else:  # No frontmatter
-                new_frontmatter = "---\n"
-                new_frontmatter += "\n".join(
-                    f"{k}: {v}" for k, v in required_fields.items()
-                )
-                new_frontmatter += "\n---\n\n"
-                content = new_frontmatter + content
+                content = "---\n---\n\n" + content
 
             # Write the modified content back
             with open(filepath, "w") as file:

@@ -3,10 +3,6 @@ languageCode = 'en-au'
 title = "Alex's Blog"
 theme = "PaperMod"
 
-## Change default post kind
-[archetypes]
-default = "papermod"
-
 ## Papermod theme options
 enableRobotsTXT = true
 buildDrafts = false
@@ -41,8 +37,11 @@ disableScrollToTop = false
 comments = false
 hidemeta = false
 hideSummary = false
-showtoc = false
+showtoc = true
 tocopen = false
+disableHLJS = false
+disableShare = false
+searchHidden = true
 
 [params.assets]
 favicon = "<link / abs url>"
