@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:1313/</loc>
+    <loc>https://apotenza92.github.io/blog/</loc>
   </url><url>
-    <loc>//localhost:1313/posts/bypass-paywalls/</loc>
+    <loc>https://apotenza92.github.io/blog/posts/bypass-paywalls/</loc>
   </url><url>
-    <loc>//localhost:1313/categories/</loc>
+    <loc>https://apotenza92.github.io/blog/categories/</loc>
   </url><url>
-    <loc>//localhost:1313/posts/</loc>
+    <loc>https://apotenza92.github.io/blog/posts/</loc>
   </url><url>
-    <loc>//localhost:1313/tags/</loc>
+    <loc>https://apotenza92.github.io/blog/tags/</loc>
   </url>
 </urlset>

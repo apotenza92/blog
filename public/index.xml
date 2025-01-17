@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Alex&#39;s Blog</title>
-    <link>//localhost:1313/</link>
+    <link>https://apotenza92.github.io/blog/</link>
     <description>Recent content on Alex&#39;s Blog</description>
     <generator>Hugo -- 0.141.0</generator>
     <language>en-us</language>
-    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://apotenza92.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Bypass Paywalls</title>
-      <link>//localhost:1313/posts/bypass-paywalls/</link>
+      <link>https://apotenza92.github.io/blog/posts/bypass-paywalls/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/bypass-paywalls/</guid>
+      <guid>https://apotenza92.github.io/blog/posts/bypass-paywalls/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;This will show you how to bypass paywalls on news websites.&lt;/p&gt;
 &lt;p&gt;Here is the &lt;a href=&#34;https://github.com/bpc-clone/bypass-paywalls-firefox-clean?tab=readme-ov-file#list-of-supported-websites&#34;&gt;list of supported websites&lt;/a&gt; that it works with. I mainly use it for The Age and AFR.&lt;/p&gt;
@@ -23,21 +23,21 @@
 &lt;ol&gt;
 &lt;li&gt;Download zip file &lt;a href=&#34;https://gitflic.ru/project/magnolia1234/bpc_uploads/blob/raw?file=bypass-paywalls-chrome-clean-master.zip&#34;&gt;here&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Unzip so you have folder: &amp;lsquo;bypass-paywalls-chrome-clean-master&amp;rsquo;&lt;/li&gt;
-&lt;li&gt;Go to Manage Extensions (may look different depending on browser) &lt;img alt=&#34;Image Description&#34; loading=&#34;lazy&#34; src=&#34;//localhost:1313/images/Pasted%20image%2020241009115121.png&#34;&gt;&lt;/li&gt;
-&lt;li&gt;Turn on Developer mode &lt;img alt=&#34;Image Description&#34; loading=&#34;lazy&#34; src=&#34;//localhost:1313/images/Pasted%20image%2020241009115232.png&#34;&gt;&lt;/li&gt;
-&lt;li&gt;Click Load unpacked &lt;img alt=&#34;Image Description&#34; loading=&#34;lazy&#34; src=&#34;//localhost:1313/images/Pasted%20image%2020241009115507.png&#34;&gt;&lt;/li&gt;
-&lt;li&gt;Find the unzipped folder and select that to load &lt;img alt=&#34;Image Description&#34; loading=&#34;lazy&#34; src=&#34;//localhost:1313/images/Pasted%20image%2020241009115547.png&#34;&gt;&lt;/li&gt;
-&lt;li&gt;Once loaded it will automatically open the plugin&amp;rsquo;s setting page. I recommend turning on &amp;ldquo;Check for update rules at startup&amp;rdquo;. Then just hit save. &lt;img alt=&#34;Image Description&#34; loading=&#34;lazy&#34; src=&#34;//localhost:1313/images/Pasted%20image%2020241009115756.png&#34;&gt;&lt;/li&gt;
-&lt;li&gt;You&amp;rsquo;re done! If you go to a website like afr you&amp;rsquo;ll see it&amp;rsquo;s working because the extension will have a small red &amp;lsquo;On&amp;rsquo; icon next to it. &lt;img alt=&#34;Image Description&#34; loading=&#34;lazy&#34; src=&#34;//localhost:1313/images/Pasted%20image%2020241009115858.png&#34;&gt;&lt;/li&gt;
+&lt;li&gt;Go to Manage Extensions (may look different depending on browser) &lt;img alt=&#34;Image Description&#34; loading=&#34;lazy&#34; src=&#34;https://apotenza92.github.io/blog/images/Pasted%20image%2020241009115121.png&#34;&gt;&lt;/li&gt;
+&lt;li&gt;Turn on Developer mode &lt;img alt=&#34;Image Description&#34; loading=&#34;lazy&#34; src=&#34;https://apotenza92.github.io/blog/images/Pasted%20image%2020241009115232.png&#34;&gt;&lt;/li&gt;
+&lt;li&gt;Click Load unpacked &lt;img alt=&#34;Image Description&#34; loading=&#34;lazy&#34; src=&#34;https://apotenza92.github.io/blog/images/Pasted%20image%2020241009115507.png&#34;&gt;&lt;/li&gt;
+&lt;li&gt;Find the unzipped folder and select that to load &lt;img alt=&#34;Image Description&#34; loading=&#34;lazy&#34; src=&#34;https://apotenza92.github.io/blog/images/Pasted%20image%2020241009115547.png&#34;&gt;&lt;/li&gt;
+&lt;li&gt;Once loaded it will automatically open the plugin&amp;rsquo;s setting page. I recommend turning on &amp;ldquo;Check for update rules at startup&amp;rdquo;. Then just hit save. &lt;img alt=&#34;Image Description&#34; loading=&#34;lazy&#34; src=&#34;https://apotenza92.github.io/blog/images/Pasted%20image%2020241009115756.png&#34;&gt;&lt;/li&gt;
+&lt;li&gt;You&amp;rsquo;re done! If you go to a website like afr you&amp;rsquo;ll see it&amp;rsquo;s working because the extension will have a small red &amp;lsquo;On&amp;rsquo; icon next to it. &lt;img alt=&#34;Image Description&#34; loading=&#34;lazy&#34; src=&#34;https://apotenza92.github.io/blog/images/Pasted%20image%2020241009115858.png&#34;&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;firefox-instructions&#34;&gt;Firefox Instructions&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;Download file &lt;a href=&#34;https://gitflic.ru/project/magnolia1234/bpc_uploads/blob/raw?file=bypass_paywalls_clean-latest.xpi&#34;&gt;here&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Go to about:addons in the URL bar. Go to Extensions, click the gear icon, and then &amp;ldquo;Install Add-on From File…&amp;rdquo; &lt;img alt=&#34;Image Description&#34; loading=&#34;lazy&#34; src=&#34;//localhost:1313/images/Pasted%20image%2020241009121012.png&#34;&gt;&lt;/li&gt;
-&lt;li&gt;Select the xpi file we downloaded earlier. &lt;img alt=&#34;Image Description&#34; loading=&#34;lazy&#34; src=&#34;//localhost:1313/images/Pasted%20image%2020241009121105.png&#34;&gt;&lt;/li&gt;
+&lt;li&gt;Go to about:addons in the URL bar. Go to Extensions, click the gear icon, and then &amp;ldquo;Install Add-on From File…&amp;rdquo; &lt;img alt=&#34;Image Description&#34; loading=&#34;lazy&#34; src=&#34;https://apotenza92.github.io/blog/images/Pasted%20image%2020241009121012.png&#34;&gt;&lt;/li&gt;
+&lt;li&gt;Select the xpi file we downloaded earlier. &lt;img alt=&#34;Image Description&#34; loading=&#34;lazy&#34; src=&#34;https://apotenza92.github.io/blog/images/Pasted%20image%2020241009121105.png&#34;&gt;&lt;/li&gt;
 &lt;li&gt;Firefox will ask if you want the extension to have permission, click &amp;lsquo;Add&amp;rsquo;.&lt;/li&gt;
-&lt;li&gt;Once loaded it will automatically open the plugin&amp;rsquo;s setting page. I recommend turning on &amp;ldquo;Check for update rules at startup&amp;rdquo;. Then just hit save. &lt;img alt=&#34;Image Description&#34; loading=&#34;lazy&#34; src=&#34;//localhost:1313/images/Pasted%20image%2020241009121304.png&#34;&gt;&lt;/li&gt;
-&lt;li&gt;You&amp;rsquo;re done! If you go to a website like afr you&amp;rsquo;ll see it&amp;rsquo;s working because the extension will have a small red &amp;lsquo;On&amp;rsquo; icon next to it. &lt;img alt=&#34;Image Description&#34; loading=&#34;lazy&#34; src=&#34;//localhost:1313/images/Pasted%20image%2020241009121350.png&#34;&gt;&lt;/li&gt;
+&lt;li&gt;Once loaded it will automatically open the plugin&amp;rsquo;s setting page. I recommend turning on &amp;ldquo;Check for update rules at startup&amp;rdquo;. Then just hit save. &lt;img alt=&#34;Image Description&#34; loading=&#34;lazy&#34; src=&#34;https://apotenza92.github.io/blog/images/Pasted%20image%2020241009121304.png&#34;&gt;&lt;/li&gt;
+&lt;li&gt;You&amp;rsquo;re done! If you go to a website like afr you&amp;rsquo;ll see it&amp;rsquo;s working because the extension will have a small red &amp;lsquo;On&amp;rsquo; icon next to it. &lt;img alt=&#34;Image Description&#34; loading=&#34;lazy&#34; src=&#34;https://apotenza92.github.io/blog/images/Pasted%20image%2020241009121350.png&#34;&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;iphone-safari-instructions-also-works-on-ipad-and-mac&#34;&gt;iPhone Safari Instructions (Also Works on iPad and Mac)&lt;/h2&gt;
 &lt;p&gt;This requires the premium version of AdGuard which has various paid plans available. There&amp;rsquo;s a 7 day free trial so you can give this a go and cancel if you don&amp;rsquo;t like it. At the time of writing this there&amp;rsquo;s a monthly plan for $1.50, yearly for $8, and a lifetime plan (which I purchased) for $20 AUD. I consider this very cheap considering how much I&amp;rsquo;ve saved on The Age + AFR subscriptions alone. It&amp;rsquo;s also a really good ad blocker.&lt;/p&gt;</description>
