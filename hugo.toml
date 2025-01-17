@@ -3,6 +3,11 @@ languageCode = 'en-au'
 title = "Alex's Blog"
 theme = "PaperMod"
 
+## Change default post kind
+[archetypes]
+default = "papermod"
+
+## Papermod theme options
 enableRobotsTXT = true
 buildDrafts = false
 buildFuture = false
@@ -131,11 +136,10 @@ name = "example.org"
 url = "https://example.org"
 weight = 30
 
-[markup]
 [markup.highlight]
-codeFences = true
-guessSyntax = true
-lineNos = true
-lineNumbersInTable = true
 noClasses = false
-style = "monokai"
+# anchorLineNos = true
+# codeFences = true
+# guessSyntax = true
+# lineNos = true
+# style = "monokai"

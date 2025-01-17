@@ -166,6 +166,31 @@ def setup_paths():
     return paths
 
 
+def create_new_post(title, paths):
+    """Create a new blog post using the papermod archetype"""
+    # Convert title to filename format
+    filename = f"{title.lower().replace(' ', '-')}.md"
+
+    print(f"Creating new post: {filename}")
+    try:
+        subprocess.run(
+            ["hugo", "new", f"posts/{filename}", "--kind=papermod"],
+            cwd=paths["hugo"]["root"],
+            check=True,
+        )
+
+        # Copy the new file to Obsidian posts directory
+        source = os.path.join(paths["hugo"]["posts"], filename)
+        dest = os.path.join(paths["obsidian"]["posts"], filename)
+        shutil.copy2(source, dest)
+
+        print(f"✅ Created {filename}")
+        return True
+    except subprocess.CalledProcessError as e:
+        print(f"Error creating post: {e}")
+        return False
+
+
 def sync_posts(paths):
     """Sync posts from Obsidian to Hugo"""
     try:

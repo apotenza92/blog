@@ -1,3 +1,0 @@
-User-agent: *
-Disallow:
-Sitemap: https://apotenza92.github.io/blog/sitemap.xml
