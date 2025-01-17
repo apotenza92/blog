@@ -1,13 +1,13 @@
 ---
 title: Bypass Paywalls
-date: 2025-01-17T14:13:00+11:00
+date: 2025-01-17T19:34:00+11:00
 ---
 
 ## Introduction
 
 This will show you how to bypass paywalls on news websites.
 
-Here is the [list of supported websites](https://github.com/bpc-clone/bypass-paywalls-firefox-clean?tab=readme-ov-file#list-of-supported-websites) that it works with. I mainly use it for The Age and AFR.
+Here is the [list of supported websites](https://github.com/bpc-clone/bypass-paywalls-firefox-clean?tab=readme-ov-file#list-of-supported-websites) that it works with. I mainly use it for The Age and AFR (Australian Financial Review).
 
 Sometimes these extensions break or get removed, so here are the full links to where the instructions are hosted. I've just shortened these instructions to make them easier to follow:
 

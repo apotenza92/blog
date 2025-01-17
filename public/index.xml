@@ -11,16 +11,16 @@
     </image>
     <generator>Hugo -- 0.141.0</generator>
     <language>en-au</language>
-    <lastBuildDate>Fri, 17 Jan 2025 14:13:00 +1100</lastBuildDate>
+    <lastBuildDate>Fri, 17 Jan 2025 19:34:00 +1100</lastBuildDate>
     <atom:link href="https://apotenza92.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Bypass Paywalls</title>
       <link>https://apotenza92.github.io/blog/posts/bypass-paywalls/</link>
-      <pubDate>Fri, 17 Jan 2025 14:13:00 +1100</pubDate>
+      <pubDate>Fri, 17 Jan 2025 19:34:00 +1100</pubDate>
       <guid>https://apotenza92.github.io/blog/posts/bypass-paywalls/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;This will show you how to bypass paywalls on news websites.&lt;/p&gt;
-&lt;p&gt;Here is the &lt;a href=&#34;https://github.com/bpc-clone/bypass-paywalls-firefox-clean?tab=readme-ov-file#list-of-supported-websites&#34;&gt;list of supported websites&lt;/a&gt; that it works with. I mainly use it for The Age and AFR.&lt;/p&gt;
+&lt;p&gt;Here is the &lt;a href=&#34;https://github.com/bpc-clone/bypass-paywalls-firefox-clean?tab=readme-ov-file#list-of-supported-websites&#34;&gt;list of supported websites&lt;/a&gt; that it works with. I mainly use it for The Age and AFR (Australian Financial Review).&lt;/p&gt;
 &lt;p&gt;Sometimes these extensions break or get removed, so here are the full links to where the instructions are hosted. I&amp;rsquo;ve just shortened these instructions to make them easier to follow:&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/bpc-clone/bypass-paywalls-chrome-clean&#34;&gt;Chrome&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://github.com/bpc-clone/bypass-paywalls-firefox-clean&#34;&gt;Firefox&lt;/a&gt;&lt;br&gt;
