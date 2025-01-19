@@ -73,8 +73,8 @@ name = "Tags"
 url = "tags"
 
 [params.homeInfoParams]
-Title = "Hi there 👋"
-Content = "Welcome"
+Title = "Welcome to Alex's blog 👋"
+Content = "I post tech guides for my friends"
 
 # [[params.socialIcons]]
 # name = "x"
